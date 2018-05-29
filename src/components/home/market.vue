@@ -1,5 +1,8 @@
 <template>
   <div class="market">
+    <div class="title">
+      商店
+    </div>
     <div class="first">
       <a>
         <span class="add-icon">+</span>
@@ -10,6 +13,16 @@
       <ul>
         <li>
           <div class="picture">
+            <img src="../../images/milk.png"/>
+          </div>
+          <div class="info">
+            <div class="name">华润万家</div>
+            <div class="adress">苏果路57号</div>
+          </div>
+        </li>
+        <li>
+          <div class="picture">
+            <img src="../../images/milk.png"/>
           </div>
           <div class="info">
             <div class="name">华润万家</div>
@@ -36,10 +49,20 @@ export default {
 <style lang="less" scoped>
   .market {
     border: 1px solid #DCDCDC;
+    border-right: 0;
+    .title{
+      text-align: center;
+      border-bottom: 1px solid #DCDCDC;
+      padding: 10px 0;
+      color: #666666;
+      font-size: 18px;
+    }
     .first{
-      margin: 10px 0;
+      margin-top: 10px;
       display: block;
       height: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #DCDCDC;
       a{
         width: 104px;
         height: 30px;
@@ -61,6 +84,35 @@ export default {
         span{
           display: inline-block;
           vertical-align: middle;
+        }
+      }
+    }
+    .second{
+      ul{
+        li{
+          display: flex;
+          margin: 10px 20px;
+          border-bottom: 1px dashed #dcdcdc;
+          align-items: center;
+          font-size: 15px;
+          color: #ABABAB;
+          cursor: pointer;
+          &:last-child{
+            border-bottom: none;
+          }
+          &:hover{
+            color: #FF9800;
+          }
+          .picture{
+            flex: 1;
+            img{
+              width: 100px;
+              height: 70px;
+            }
+          }
+          .info{
+            flex: 1;
+          }
         }
       }
     }
